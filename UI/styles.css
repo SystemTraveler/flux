@@ -1,0 +1,90 @@
+body {
+    background-color: #000;
+    color: #eee;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    font-family: 'Inter';
+}
+
+#background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('media/bg.jpg');
+    object-fit: cover;
+    background-size: 100% 100%;
+    z-index: -1;
+}
+
+.InfoBlock {
+    width: 320px;
+    height: 40px;
+    border-radius: 1000px;
+    margin-top: 25px;
+    margin-left: 25px;
+    font-size: 25px;
+    background-color: transparent;
+    backdrop-filter: blur(0px);
+    color: #eee;
+    display: flex;
+    flex-direction: row;
+    padding-left: 15px;
+    align-items: center;
+    transition: 2s;
+}
+
+.InfoBlock.Notify {
+    width: 320px;
+    backdrop-filter: blur(64px);
+    transition: 2s;
+}
+
+#Applications {
+    z-index: 2;
+    flex-wrap: wrap; /* Allow flex items to wrap to the next line */
+    display: flex;
+    height: 80%;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    position: fixed;
+    padding: 5vw;
+    margin-left: -75px;
+    justify-content: center;
+    transition: 0.3s;
+}
+
+.Application {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 50px;
+    margin: 0 25px; /* Adjust margin between applications */
+    width: calc((100% - 10vw) / 6); /* Calculate width for maximum two applications per row */
+    box-sizing: border-box;
+}
+
+.AppIcon {
+    z-index: 3;
+    height: 10vw;
+    width: 15vw;
+    object-fit: cover;
+    border-radius: 25px;
+    transition: 0.2s;
+}
+
+.AppName {
+    z-index: 3;
+    margin-top: 20px;
+    transition: 0.2s;
+    color: transparent;
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url('fonts/Inter.ttf');
+}
