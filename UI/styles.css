@@ -7,13 +7,72 @@ body {
     font-family: 'Inter';
 }
 
+#Time {
+    z-index: 4;
+    color: transparent;
+    height: 100%;
+    width: 100%;
+    font-size: 7rem;
+    font-weight: bold;
+    display: flex;
+    animation: moveTime 30s infinite;
+    justify-content: center;
+    margin-top: 5rem;
+    transition: 0.3s;
+}
+
+@keyframes moveTime {
+    0% {
+        transform: translate(0, 0);
+    }
+    25% {
+        transform: translate(10px, 0);
+    }
+    50% {
+        transform: translate(10px, 10px);
+    }
+    75% {
+        transform: translate(0, 10px);
+    }
+    100% {
+        transform: translate(0, 0);
+    }
+}
+
+#Saver {
+    display: flex;
+    z-index: 3;
+    top: 0;
+    left: 0;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    overflow: hidden; /* Это важно для предотвращения прокрутки */
+    object-fit: cover;
+    background-color: transparent;
+    transition: 0.3s;
+}
+
+#Saver video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: auto;
+    height: auto;
+    min-width: 100%;
+    min-height: 100%;
+    transform: translate(-50%, -50%);
+    object-fit: cover; /* Важно для заполнения контейнера */
+}
+
+
 #background {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url('media/bg.jpg');
+    background-image: url('media/bg.png');
     object-fit: cover;
     background-size: 100% 100%;
     z-index: -1;
@@ -24,22 +83,25 @@ body {
     height: 40px;
     border-radius: 1000px;
     margin-top: 25px;
+    top: 0;
+    position: fixed;
     margin-left: 25px;
     font-size: 25px;
     background-color: transparent;
     backdrop-filter: blur(0px);
-    color: #eee;
+    color: transparent;
     display: flex;
     flex-direction: row;
     padding-left: 15px;
     align-items: center;
-    transition: 2s;
+    transition: 0.3s;
 }
 
 .InfoBlock.Notify {
     width: 320px;
     backdrop-filter: blur(64px);
-    transition: 2s;
+    color: #eee;
+    transition: 0.3s;
 }
 
 #Applications {
