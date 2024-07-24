@@ -1,7 +1,7 @@
 ### Быстрый старт
 1. Устанавливаем на любое устройство любую ОС (желательно Unix-like, то есть FreeBSD, GNU/Linux дистрибутивы и так далее)
 2. Устанавливаем с помощью пакетного менеджера git, nano, python6 xorg, xorg-server
-3. Пишем: git clone https://github.com/SystemTraveler/flux
+3. Пишем: git clone https://github.com/SystemTraveler/flux.git
 4. Далее переходим в директорию, и открываем файл Core.py. Измените пути /Users/mafan2010/... на свой путь к файлам
 5. Устанавливаем зависимости и библиотеки
 6. Изменяем .bashrc для автозапуска X сервера и Core.py (python3 "ваш путь к Core.py")
